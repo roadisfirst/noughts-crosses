@@ -1,0 +1,77 @@
+$grid-color: black;
+$field-color: white;
+
+body {
+  height: 100vh;
+  background: linear-gradient(#f3f053, #e76711);
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: fit-content;
+  padding-bottom: 2rem;
+}
+
+
+.field-container,
+.game-controlls,
+.game-info {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.field-container {
+  position: relative;
+}
+
+.game-info,
+.game-controlls {
+  margin: 1rem 2rem 0;
+  font-size: 2rem;
+  align-items: center;
+}
+
+.game-controlls {
+ gap: 2rem;
+}
+
+.field {
+  display: grid;
+  grid-gap: 0.2rem;
+  background-color: $grid-color;
+  grid-template-columns: repeat(3, minmax(10rem,1fr));
+  
+}
+
+.field > div {
+  padding: 2rem;
+  font-size: 5rem;
+  background-color: $field-color;
+  cursor: pointer;
+  text-align: center;
+  height: 6rem;
+}
+
+.active-player {
+  font-weight: bolder;
+}
+
+.player {
+  padding: 0 1rem;
+}
+
+.message {
+  height: 3rem;
+  font-weight: bold;
+  text-align: center;
+  font-size: 2rem;
+  vertical-align: middle;
+}
+
+.pointer {
+  cursor: pointer;
+}
